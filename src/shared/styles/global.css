@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+:root{
+  --header--color: rgba(214,239,255,1.00);
+  --blue--color: rgba(30,156,255,1.00);
+  --blue--color: rgba(6,124,255,1.00);
+  --blue--color: rgba(8,80,197,1.00);
+  --black--color: rgba(50,50,50,1);
+  --red--color: rgba(255,64,64,1.00);
+}
