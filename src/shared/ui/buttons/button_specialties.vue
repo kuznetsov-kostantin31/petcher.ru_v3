@@ -1,94 +1,94 @@
 <script>
 
-export default{
-    data() {
-      return {
-        selectedProfession: 'Frontend-разработчик',
-        isDropdownOpen: false,
-        professions: ['Frontend-разработчик', 'Python-разработчик', '1C-разработчик', 'Java-разработчик', 'Web-дизайнер']
-      };
+export default {
+  data() {
+    return {
+      selectedProfession: 'Frontend-разработчик',
+      isDropdownOpen: false,
+      professions: ['Frontend-разработчик', 'Python-разработчик', '1C-разработчик', 'Java-разработчик', 'Web-дизайнер']
+    };
+  },
+  methods: {
+    toggleDropdown() {
+      this.isDropdownOpen = !this.isDropdownOpen;
     },
-    methods: {
-      toggleDropdown() {
-        this.isDropdownOpen = !this.isDropdownOpen;
-      },
-      selectProfession(profession) {
-        this.selectedProfession = profession;
+    selectProfession(profession) {
+      this.selectedProfession = profession;
+      this.isDropdownOpen = false;
+    },
+    closeDropdown(event) {
+      if (!this.$el.contains(event.target)) {
         this.isDropdownOpen = false;
-      },
-      closeDropdown(event) {
-        if (!this.$el.contains(event.target)) {
-          this.isDropdownOpen = false;
-        }
-      },
+      }
     },
-    watch: {
-      isDropdownOpen(newValue) {
-        if (newValue) {
-          document.addEventListener('click', this.closeDropdown);
-        } else {
-          document.removeEventListener('click', this.closeDropdown);
-        }
-      },
+  },
+  watch: {
+    isDropdownOpen(newValue) {
+      if (newValue) {
+        document.addEventListener('click', this.closeDropdown);
+      } else {
+        document.removeEventListener('click', this.closeDropdown);
+      }
     },
+  },
 }
 </script>
 
 <template>
   <div class="flex flex-col">
     <div>
-      <p class="font_WMD">Выберите свою специальность</p> 
+      <p class="font_WMD">Выберите свою специальность</p>
     </div>
     <div>
-        <div v-if="isDropdownOpen" class=" absolute flex flex-col items-start isolate w-[376px] h-[180px] flex-none order-none self-stretch grow-0 p-0 bg-white">
-      <ul>
-        <li 
-          v-for="profession in professions" 
-          :key="profession" 
-          @click="selectProfession(profession)" 
-          class="flex flex-row items-center w-[376px] h-9 shadow-[0px_0px_4px_rgba(0,0,0,0.1)] flex-none order-none self-stretch grow-0 z-[4] px-4 py-2 rounded-[7px] bg-white">
-          {{ profession }}
-        </li>
-      </ul>
-    </div>
-    <div class="">
-      <button 
-        @click="toggleDropdown" 
-        class="flex flex-row justify-between items-center gap-2.5 w-[376px] h-[39px] shadow-[0px_0px_16px_rgba(0,0,0,0.25)] flex-none order-1 grow-0 px-6 py-3 mt-2 rounded-2xl bg-blue-600"><p class="font_Unbounded_2">{{ selectedProfession }}</p>
-        <span>
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M10.5 4.5H7.5V1.5C7.5 1.10218 7.34196 0.720644 7.06066 0.43934C6.77936 0.158035 6.39782 0 6 0C5.60218 0 5.22064 0.158035 4.93934 0.43934C4.65804 0.720644 4.5 1.10218 4.5 1.5V4.5H1.5C1.10218 4.5 0.720644 4.65804 0.43934 4.93934C0.158035 5.22064 0 5.60218 0 6C0 6.39782 0.158035 6.77936 0.43934 7.06066C0.720644 7.34196 1.10218 7.5 1.5 7.5H4.5V10.5C4.5 10.8978 4.65804 11.2794 4.93934 11.5607C5.22064 11.842 5.60218 12 6 12C6.39782 12 6.77936 11.842 7.06066 11.5607C7.34196 11.2794 7.5 10.8978 7.5 10.5V7.5H10.5C10.8978 7.5 11.2794 7.34196 11.5607 7.06066C11.842 6.77936 12 6.39782 12 6C12 5.60218 11.842 5.22064 11.5607 4.93934C11.2794 4.65804 10.8978 4.5 10.5 4.5Z" fill="white"/>
-        </svg>
-        </span>
-      </button>
-    </div>
+      <div v-if="isDropdownOpen"
+        class=" absolute flex flex-col items-start isolate w-[376px] h-[180px] flex-none order-none self-stretch grow-0 p-0 bg-white">
+        <ul>
+          <li v-for="profession in professions" :key="profession" @click="selectProfession(profession)"
+            class="flex flex-row items-center w-[376px] h-9 shadow-[0px_0px_4px_rgba(0,0,0,0.1)] flex-none order-none self-stretch grow-0 z-[4] px-4 py-2 rounded-[7px] bg-white">
+            {{ profession }}
+          </li>
+        </ul>
+      </div>
+      <div class="">
+        <button @click="toggleDropdown"
+          class="flex flex-row justify-between items-center gap-2.5 w-[376px] h-[39px] shadow-[0px_0px_16px_rgba(0,0,0,0.25)] flex-none order-1 grow-0 px-6 py-3 mt-2 rounded-2xl bg-blue-600">
+          <p class="font_Unbounded_2">{{ selectedProfession }}</p>
+          <span>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10.5 4.5H7.5V1.5C7.5 1.10218 7.34196 0.720644 7.06066 0.43934C6.77936 0.158035 6.39782 0 6 0C5.60218 0 5.22064 0.158035 4.93934 0.43934C4.65804 0.720644 4.5 1.10218 4.5 1.5V4.5H1.5C1.10218 4.5 0.720644 4.65804 0.43934 4.93934C0.158035 5.22064 0 5.60218 0 6C0 6.39782 0.158035 6.77936 0.43934 7.06066C0.720644 7.34196 1.10218 7.5 1.5 7.5H4.5V10.5C4.5 10.8978 4.65804 11.2794 4.93934 11.5607C5.22064 11.842 5.60218 12 6 12C6.39782 12 6.77936 11.842 7.06066 11.5607C7.34196 11.2794 7.5 10.8978 7.5 10.5V7.5H10.5C10.8978 7.5 11.2794 7.34196 11.5607 7.06066C11.842 6.77936 12 6.39782 12 6C12 5.60218 11.842 5.22064 11.5607 4.93934C11.2794 4.65804 10.8978 4.5 10.5 4.5Z"
+                fill="white" />
+            </svg>
+          </span>
+        </button>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-
-.font_Unbounded_2{
-font-family: 'Unbounded';
-font-style: normal;
-font-weight: 300;
-font-size: 12px;
-line-height: 15px;
-color: #FFFFFF;
-flex: none;
-order: 0;
-flex-grow: 0;
+.font_Unbounded_2 {
+  font-family: 'Unbounded';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 
 }
-.font_WMD{
-font-family: 'Wix Madefor Display';
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 20px;
-color: #067CFF;
-flex: none;
-order: 0;
-flex-grow: 0;
+
+.font_WMD {
+  font-family: 'Wix Madefor Display';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #067CFF;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 </style>
