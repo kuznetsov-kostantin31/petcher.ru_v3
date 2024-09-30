@@ -1,6 +1,6 @@
 <script>
 import reg_central from "@/widgets/register_central_box/reg_central_box.vue"
-import headerr from '@/widgets/header/header.vue';
+import headerr from '@/widgets/header/header-reg/header.vue';
 
 export default {
   components:{

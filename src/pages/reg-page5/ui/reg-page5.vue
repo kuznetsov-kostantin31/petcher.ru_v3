@@ -1,5 +1,5 @@
 <script>
-import headerr from '@/widgets/header/header.vue';
+import headerr from '@/widgets/header/header-reg/header.vue';
 import reg_central_box_5 from '@/widgets/register_central_box/reg_central_box_5.vue';
 
 export default{

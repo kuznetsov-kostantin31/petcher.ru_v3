@@ -1,5 +1,5 @@
 <script>
-import headerr from '@/widgets/header/header.vue';
+import headerr from '@/widgets/header/header-reg/header.vue';
 
 export default{
     components:{
