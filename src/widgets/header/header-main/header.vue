@@ -10,14 +10,14 @@ export default {
 </script>
 
 <template>
-   <div
-      className="flex justify-between relative w-full h-[58px] shadow-[0px_0px_4px_rgba(0,104,255,0.25)] left-0 top-0">
+   <div className="flex justify-between bg-white relative w-full z-10 h-[58px] shadow-[0px_0px_4px_rgba(0,104,255,0.25)] left-0 top-0">
+      <div class="flex justify-between m-auto w-[1450px]"> 
       <div className="
       mx-auto my-auto  h-[27px] w-[91px]"><img src="/src/shared/assets/img/petcher-icon-header.png" alt="d">
       </div>
       <div class="mx-auto my-auto flex justify-between gap-16 w-[365px] h-5 ">
-         <btn_black>Главная</btn_black>
-         <btn_black>Проект</btn_black>
+         <a href="/"><btn_black>Главная</btn_black></a>
+         <a href="/project_create_page"><btn_black>Проект</btn_black></a>
          <btn_black>Отклики</btn_black>
       </div>
       <div class="mx-auto my-auto flex justify-between gap-6 w-[120px] h-5 ">
@@ -58,6 +58,7 @@ export default {
          </svg>
 
       </div>
- 
+   </div>
+
    </div>
 </template>
