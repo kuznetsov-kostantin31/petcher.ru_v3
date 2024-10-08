@@ -13,25 +13,21 @@ export default {
 </script>
 
 <template>
-  <div className="w-1/2 flex justify-start
-    absolute left-1/4 top-1/4">
-    <text_under_left>Восстановление пароля</text_under_left>
-  </div>
-
-  <div className="w-1/2 flex justify-center
-    absolute left-1/4 top-72">
-    <div className="h-full w-full flex flex-col relative left-1/3">
-      <div className="h-28 w-9"></div>
-      <div className="">
-        <div className="">
-          <input_login_or_email></input_login_or_email>
-        </div>
-        <a href="/register6">
-          <btn_next>Далее</btn_next>
-        </a>
+  <div className="w-full flex flex-col items-baseline
+    absolute top-[15.5%]">
+    <div class="flex justify-between  w-full h-[58px] left-0 top-0">
+      <div class="m-auto flex w-[1280px] px-16 ">
+        <text_under_left>Восстановление пароля</text_under_left>
       </div>
     </div>
-
-
+    <div class="m-auto mt-60 flex flex-col">
+      <div>
+        <input_login_or_email></input_login_or_email>
+      </div>
+      <a href="/register6">
+        <btn_next>Далее</btn_next>
+      </a>
+    </div>
   </div>
+
 </template>

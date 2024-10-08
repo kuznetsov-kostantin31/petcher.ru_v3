@@ -1,6 +1,6 @@
 <template>
     <div class="border">
-        <p>
+        <p class="font_Unbounded">
             <slot></slot>
         </p>
     </div>
@@ -11,24 +11,25 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
+
+    padding: 3px 8px;
     gap: 10px;
     height: 26px;
-    padding-left: 8px;
-    padding-right: 8px;
+    border: 1px solid rgba(6, 124, 255, 0.5);
     border-radius: 16px;
-    border: 1px solid white;
+    color: gray;
     font-family: 'Unbounded';
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
     line-height: 20px;
-    color: #FFFFFF;
 
 }
 
 .border:active {
-    background-color: white;
-    color: #067CFF
+    background-color: #067CFF;
+    color: white;
 }
 </style>

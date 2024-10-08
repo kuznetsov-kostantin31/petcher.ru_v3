@@ -10,33 +10,33 @@ export default {
     text_under_left,
     text_under_under,
     button_grey
-    
+
   }
 }
 </script>
 
 <template>
-  <div class="w-1/2 flex justify-start flex-col
-    absolute left-1/4 top-1/4">
-    <text_under_left>Регистрация прошла успешно</text_under_left>
-    <text_under_under>Поздравляем!</text_under_under>
-  </div>
-
-  <div class="w-1/2 flex justify-center
-    absolute left-1/4 top-72">
-    <div class="h-full w-full flex flex-col  relative left-1/3">
-      <div class="h-28 w-9"></div>
-      <div class="flex items-center  ">
-        <div class="flex flex-col items-center gap-2 ">
-          <a href="/">
-            <btn_add_project>Добавить проект</btn_add_project>
-          </a>
-          <a href="">
-            <button_grey>Перейти</button_grey>
-          </a>
+  <div className="w-full flex flex-col items-baseline
+    absolute top-[15.5%]">
+    <div class="flex justify-between  w-full h-[58px] left-0 top-0">
+      <div class="m-auto flex w-[1280px] px-16 justify-start">
+        <div class="w-[330px]">
+          <text_under_left>Регистрация прошла успешно</text_under_left>
+          <text_under_under>Поздравляем!</text_under_under>
         </div>
+
       </div>
     </div>
-
+    <div class="m-auto mt-60 flex flex-col items-center">
+      <a href="/">
+        <btn_add_project>Добавить проект</btn_add_project>
+      </a>
+      <div class="mt-1">
+        <a href="">
+        <button_grey>Перейти</button_grey>
+      </a>
+      </div>
+    </div>
   </div>
+
 </template>

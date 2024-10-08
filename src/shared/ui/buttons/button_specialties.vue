@@ -41,7 +41,7 @@ export default {
     </div>
     <div>
       <div v-if="isDropdownOpen"
-        class=" absolute flex flex-col items-start isolate w-[376px] h-[180px] flex-none order-none self-stretch grow-0 p-0 bg-white">
+        class="absolute flex flex-col items-start w-[376px] h-[180px] self-stretch grow-0 p-0 bg-white">
         <ul>
           <li v-for="profession in professions" :key="profession" @click="selectProfession(profession)"
             class="flex flex-row items-center w-[376px] h-9 shadow-[0px_0px_4px_rgba(0,0,0,0.1)] flex-none order-none self-stretch grow-0 z-[4] px-4 py-2 rounded-[7px] bg-white">
@@ -51,7 +51,7 @@ export default {
       </div>
       <div class="">
         <button @click="toggleDropdown"
-          class="flex flex-row justify-between items-center gap-2.5 w-[376px] h-[39px] shadow-[0px_0px_16px_rgba(0,0,0,0.25)] flex-none order-1 grow-0 px-6 py-3 mt-2 rounded-2xl bg-blue-600">
+          class="flex flex-row justify-between items-center gap-2.5 w-[376px] h-[39px] shadow-[0px_0px_16px_rgba(0,0,0,0.25)] px-6 py-3 mt-2 rounded-2xl bg-blue-600">
           <p class="font_Unbounded_2">{{ selectedProfession }}</p>
           <span>
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">

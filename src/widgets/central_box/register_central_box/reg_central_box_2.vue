@@ -16,30 +16,19 @@ export default {
 </script>
 
 <template>
-  <div class="flex">
-    <div class="w-1/2 flex justify-between
-    absolute left-1/4 top-1/4">
-      <text_under_left>Выберите свою специальность</text_under_left>
-      <text_under_right>4/4</text_under_right>
-    </div>
-
-    <div class="w-1/2 flex justify-center
-    absolute left-1/4 top-72">
-      <div class="h-full w-full flex flex-col relative left-1/3">
-        <div class="h-28 w-9"></div>
-        <div class="">
-          <div>
-            <div class="">
-              <button_specialties></button_specialties>
-              <a href="/register3">
-                <btn_next>Далее</btn_next>
-              </a>
-            </div>
-          </div>
+    <div className="w-full flex flex-col items-baseline
+      absolute top-[15.5%]">
+      <div class="flex justify-between  w-full h-[58px] left-0 top-0">
+        <div class="m-auto flex w-[1280px] px-16 justify-between">
+          <text_under_left>Выберите свою специальность</text_under_left>
+          <text_under_right>4/4</text_under_right>
         </div>
       </div>
-
-
+      <div class="m-auto mt-60 flex flex-col">
+        <button_specialties></button_specialties>
+        <a href="/register3">
+          <btn_next>Далее</btn_next>
+        </a>
+      </div>
     </div>
-  </div>
 </template>

@@ -20,10 +20,10 @@ export default {
         <p class="font_WMD">Введите полученный код</p>
     </div>
     <div class="flex flex-col items-center">
-        <div class="flex space-x-1">
+        <div class="flex">
             <input v-model="code" type="text" maxlength="6"
                 class="w-10 h-10 border rounded text-center focus:outline-none" @input="updateCode"
-                placeholder="Введите код" />
+                />
             <div class="flex space-x-1">
                 <span class="box-border w-8 h-9 rounded-lg border-2 border-solid border-[#067CFF] left-[82px] top-11">{{
                     code[0] }}</span>
@@ -60,8 +60,7 @@ input {
     flex: none;
     order: 0;
     flex-grow: 0;
-    position: absolute;
-    top: 80px
+    margin-bottom: 15px;
 }
 
 span {

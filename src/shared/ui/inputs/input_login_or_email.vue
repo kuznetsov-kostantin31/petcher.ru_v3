@@ -17,7 +17,7 @@
 }
 
 .font_WMD_2 {
-    font-family: 'Unbounded';
+    font-family: 'Unboundedv';
     font-style: normal;
     font-weight: 300;
     font-size: 12px;

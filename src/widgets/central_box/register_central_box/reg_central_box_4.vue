@@ -1,5 +1,5 @@
 <script>
-import input_password from '@/shared/ui/inputs/imput_password.vue';
+import input_password from '@/shared/ui/inputs/input_password.vue';
 import btn_next from '@/shared/ui/buttons/button_blue.vue'
 import btn_no_account from '@/shared/ui/buttons/button_grey.vue';
 import btn_forgot_your_password from '@/shared/ui/buttons/button_grey.vue';
@@ -21,40 +21,33 @@ export default {
 </script>
 
 <template>
-
-  <div className="w-1/2 flex justify-start
-    absolute left-1/4 top-1/4">
-    <text_under_left>Добро пожаловать в Patcher</text_under_left>
-  </div>
-
-  <div className="w-1/2 flex justify-center
-    absolute left-1/4 top-72">
-    <div className="h-full w-full flex flex-col relative left-1/3">
-      <div className="h-28 w-9"></div>
-      <div className="">
-        <div className="">
-          <input_login_or_email></input_login_or_email>
-        </div>
-        <div className="mt-5">
-          <input_password></input_password>
-        </div>
-        <a href="/">
-          <btn_next>Далее</btn_next>
-        </a>
-        <div class="flex justify-end h-[38px] w-[379px]">
-          <div class="flex flex-col items-end">
-            <a href="/register">
-              <btn_no_account>Ещё нет аккаунта? Зарегестрироваться</btn_no_account>
-            </a>
-            <a href="/register5">
-              <btn_forgot_your_password>Забыли пароль?</btn_forgot_your_password>
-            </a>
-          </div>
-        </div>
+  <div className="w-full flex flex-col items-baseline
+    absolute top-[15.5%]">
+    <div class="flex justify-between  w-full h-[58px] left-0 top-0">
+      <div class="m-auto flex w-[1280px] px-16 justify-between">
+        <text_under_left>Добро пожаловать в Patcher</text_under_left>
       </div>
     </div>
 
-
+    <div class="m-auto mt-60 flex flex-col">
+      <div>
+        <input_login_or_email></input_login_or_email>
+      </div>
+      <div>
+        <input_password></input_password>
+      </div>
+      <a href="/">
+        <btn_next>Далее</btn_next>
+      </a>
+      <div class="flex flex-col items-end">
+        <a href="/register">
+          <btn_no_account>Ещё нет аккаунта? Зарегестрироваться</btn_no_account>
+        </a>
+        <a href="/register5">
+          <btn_forgot_your_password>Забыли пароль?</btn_forgot_your_password>
+        </a>
+      </div>
+    </div>
   </div>
 
 </template>

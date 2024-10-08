@@ -13,12 +13,12 @@ export default {
 
 <template>
 
-  <div class="flex flex-col min-h-full">
+  <div class="flex flex-col overflow-x-hidden">
     
     <div>
       <header class="z-10">
         <headerr></headerr>
-        <img class="absolute bottom-[350px] left-1/4 -z-10 rotate-90" src="/src/shared/assets/icons/mainpage_shadow.svg" alt="blue">
+        <!-- <img class="absolute bottom-[350px] left-1/4 -z-10 rotate-90" src="/src/shared/assets/icons/mainpage_shadow.svg" alt="blue"> -->
       </header>
       <main class="flex-grow z-10">
         <main_central_box></main_central_box>

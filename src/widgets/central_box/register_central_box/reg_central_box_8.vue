@@ -13,24 +13,20 @@ export default {
 </script>
 
 <template>
-  <div class="w-1/2 flex justify-start flex-col
-    absolute left-1/4 top-1/4">
-    <text_under_left>Восстановление прошло успешно</text_under_left>
-    <text_under_under>Поздравляем!</text_under_under>
-  </div>
-
-  <div class="w-1/2 flex justify-center
-    absolute left-1/4 top-72">
-    <div class="h-full w-full flex flex-col relative left-1/3">
-      <div class="h-28 w-9"></div>
-      <div class="">
-        <div>
-          <a href="/">
-            <btn_next_work>Продолжить работу</btn_next_work>
-          </a>
-        </div>
+  <div className="w-full flex flex-col items-baseline
+    absolute top-[15.5%]">
+    <div class="flex justify-between  w-full h-[58px] left-0 top-0">
+      <div class="m-auto flex w-[1280px] px-16 ">
+        <div class="w-80">
+          <text_under_left>Восстановление прошло успешно</text_under_left>
+          <text_under_under>Поздравляем!</text_under_under>
+        </div>  
       </div>
+    </div> 
+    <div class="m-auto mt-60 flex flex-col">
+        <a href="/">
+          <btn_next_work>Продолжить работу</btn_next_work>
+        </a>
     </div>
-
   </div>
 </template>

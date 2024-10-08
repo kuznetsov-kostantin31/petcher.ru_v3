@@ -18,31 +18,30 @@ export default {
 </script>
 
 <template>
-  <div className="w-1/2 flex justify-between
-    absolute left-1/4 top-1/4">
+    <div className="w-full flex flex-col items-baseline
+    absolute top-[15.5%]">
+    <div class="flex justify-between  w-full h-[58px] left-0 top-0">
+      <div class="m-auto flex md:w-[1280px] md:px-16 md:justify-between">
     <text_under_left>Добро пожаловать в Patcher</text_under_left>
-    <text_under_right>1/4</text_under_right>
+    <div class="hidden md:block"><text_under_right>1/4</text_under_right></div>
   </div>
+</div>
 
-  <div className="w-1/2 flex justify-center
-    absolute left-1/4 top-72">
-    <div className="h-full w-full flex flex-col relative left-1/3">
-      <div className="h-28 w-9"></div>
-      <div className="">
-        <div className="">
-          <input_name></input_name>
-        </div>
-        <div className="mt-5">
-          <input_login></input_login>
-        </div>
+    <div class="m-auto mt-60 flex flex-col">
+      <div>
+        <input_name></input_name>
+      </div>
+      <div class="mt-3">
+        <input_login></input_login>
+      </div>
+          
         <a href="/register1">
           <btn_next>
             <p>Далее</p>
           </btn_next>
         </a>
-      </div>
     </div>
-
-
   </div>
+
+
 </template>

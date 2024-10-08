@@ -19,7 +19,7 @@ export default {
 
 <template>
     <div className="w-full flex flex-col items-baseline
-    absolute top-1/4">
+    absolute top-[15.5%]">
         <div class="w-1/2 flex justify-start flex-col
     absolute left-1/4 top-1/5">
             <div class="w-80">
@@ -29,7 +29,7 @@ export default {
 
 
         </div>
-        <div class="m-auto mt-40 flex flex-col">
+        <div class="m-auto mt-60 flex flex-col">
             <div
                 class="box-border flex flex-col justify-center items-center gap-4 border px-0 py-4 rounded-2xl border-solid border-[rgba(0,0,0,0.05)]">
                 <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">

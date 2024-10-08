@@ -18,14 +18,14 @@ export default{
 
 <template>
   <div className="w-full flex flex-col items-baseline
-    absolute top-1/4">
+    absolute top-[15.5%]">
     <div class="flex justify-between  w-full h-[58px] left-0 top-0">
       <div class="m-auto flex w-[1250px] px-14 justify-between">
          <text_under_left>Напишите информацию о проекте</text_under_left>
          <text_under_right>3/4</text_under_right>
       </div>
     </div>
-    <div class="m-auto mt-40 flex flex-col ">
+    <div class="m-auto mt-60 flex flex-col ">
       
       <input_project_create></input_project_create>
       <div class="flex flex-col items-center gap-2">
