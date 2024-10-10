@@ -13,8 +13,17 @@ export default {
     text_under_left,
     text_under_right
 
+  },
+  data() {
+    return {
+      name: '',
+      login: '',
+    };
+  },
+  methods: {
+    
   }
-}
+};
 </script>
 
 <template>
@@ -27,20 +36,21 @@ export default {
   </div>
 </div>
 
-    <div class="m-auto mt-60 flex flex-col">
+    <form  @submit.prevent="goToNextStep" class="m-auto mt-60 flex flex-col">
       <div>
-        <input_name></input_name>
+        <input_name :username="username" @update-username="username = $event"></input_name>
       </div>
       <div class="mt-3">
-        <input_login></input_login>
+        <input_login :loginName="loginName" @update-login-name="loginName = $event"></input_login>
       </div>
           
         <a href="/register1">
-          <btn_next>
+          <btn_next type="submit">
             <p>Далее</p>
           </btn_next>
         </a>
-    </div>
+    </form>
+    <p v-if="error">{{ error }}</p>
   </div>
 
 

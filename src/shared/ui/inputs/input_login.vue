@@ -1,6 +1,23 @@
+<script>
+export default {
+  props: ['loginName'],
+  emits: ['update-login-name'],
+  data() {
+    return {
+      localLoginName: this.loginName
+    };
+  },
+  methods: {
+    updateLoginName() {
+      this.$emit('update-login-name', this.localLoginName);
+    }
+  }
+};
+</script>
+
 <template>
     <p class="font_WMD">Введите свой логин</p>
-    <input class="font_WMD_2" type="text" placeholder="ausdam">
+    <input v-model="localLoginName" @input="updateLoginName" class="font_WMD_2" type="text" placeholder="ausdam">
 </template>
 
 <style scoped>

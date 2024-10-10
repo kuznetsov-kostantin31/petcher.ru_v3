@@ -1,7 +1,18 @@
+<script>
+import btn_black from '@/shared/ui/buttons/button_black.vue';
+
+
+export default {
+   components: {
+      btn_black
+   }
+}
+</script>
+
 <template>
-  <div
-    className="flex justify-between bg-white absolute w-full z-10 h-[58px] shadow-[0px_0px_4px_rgba(0,104,255,0.25)] flex-none order-none ">
-    <button class="inline-block md:hidden">
+   <nav
+      className="flex justify-between bg-white relative w-full z-10 h-[58px] shadow-[0px_0px_4px_rgba(0,104,255,0.25)] left-0 top-0">
+      <button class="ml-5 inline-block md:hidden">
          <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                d="M18.75 6.75H1.25C0.559648 6.75 0 7.30965 0 8C0 8.69035 0.559648 9.25 1.25 9.25H18.75C19.4404 9.25 20 8.69035 20 8C20 7.30965 19.4404 6.75 18.75 6.75Z"
@@ -15,14 +26,19 @@
          </svg>
 
       </button>
-    <div class="flex justify-between m-auto w-[90rem]">
-      <div className="
-       mx-auto my-auto  h-[27px] w-[88px]"><img src="/src/shared/assets/img/petcher-icon-header.png" alt="d">
+      <div class="flex justify-between m-auto w-[1450px]">
+         <div className="
+          mx-auto my-auto  h-[27px] w-[91px]"><img src="/src/shared/assets/img/petcher-icon-header.png" alt="d">
+         </div>
+         <div class="mx-auto my-auto hidden md:flex justify-between gap-16 w-[365px] h-5 ">
+         
+         </div>
+         <div class="mx-auto my-auto flex justify-end md:justify-between gap-6 w-[120px] h-5 ">
+          
+
+         </div>
       </div>
-      <div class="mx-auto my-auto flex justify-between gap-16 w-[365px] h-5 ">
-      </div>
-      <div class="mx-auto my-auto flex justify-between gap-6 w-[120px] h-5 ">
-      </div>
-    </div>
-  </div>
+
+   </nav>
+
 </template>

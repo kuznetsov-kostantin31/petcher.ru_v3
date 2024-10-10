@@ -12,7 +12,7 @@ export default{
 </script>
 
 <template>
-  <div class="flex">
+  <div class="">
     <header>
       <headerr></headerr>     
     </header>

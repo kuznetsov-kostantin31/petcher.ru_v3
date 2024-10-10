@@ -1,10 +1,18 @@
 <script>
 export default {
+  props: ['username'],
+  emits: ['update-username'],
   data() {
     return {
       showTooltip: false,
+      localUsername: this.username
     };
   },
+  methods: {
+    updateUsername() {
+      this.$emit('update-username', this.localUsername);
+    }
+  }
 };
 </script>
 
@@ -62,7 +70,7 @@ export default {
       </ul>
     </div>
   </div>
-  <input className="font_WMD_2" type="text" placeholder="Александр Довжик"></input>
+  <input v-model="localUsername" @input="updateUsername" className="font_WMD_2" type="text" placeholder="Александр Довжик"></input>
 
 </template>
 <style scoped>

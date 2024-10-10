@@ -1,6 +1,27 @@
+<script>
+export default {
+  props: ['email'],
+  data() {
+    return {
+      localEmail: this.email
+    };
+  },
+  methods: {
+    updateEmail() {
+      this.$emit('update-email', this.localEmail);
+    }
+  },
+  watch: {
+    email(newEmail) {
+      this.localEmail = newEmail;
+    }
+  }
+};
+</script>
+
 <template>
     <p class="font_WMD">Логин / почта</p>
-    <input className="font_WMD_2" type="email" placeholder="marmok@example.com">
+    <input v-model="localEmail" @input="updateEmail" className="font_WMD_2"  type="email" placeholder="marmok@example.com">
 </template>
 
 <style scoped>

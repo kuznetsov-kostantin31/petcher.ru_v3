@@ -1,8 +1,10 @@
 <script>
 export default {
+  props: ['password'],
+  emits: ['update-password'],
   data() {
     return {
-      password: '',
+      localPassword: this.password,
       isPasswordVisible: false,
     };
   },
@@ -15,15 +17,22 @@ export default {
     togglePassword() {
       this.isPasswordVisible = !this.isPasswordVisible;
     },
+    updatePassword() {
+      this.$emit('update-password', this.localPassword);
+    }
   },
-}
-
+  watch: {
+    password(newPassword) {
+      this.localPassword = newPassword;
+    }
+  }
+};
 </script>
 
 <template>
   <p class="font_WMD">Пароль</p>
   <div class="relative">
-    <input className="font_WMD_2" :type="inputType" v-model="password" placeholder="superkryt1337">
+    <input className="font_WMD_2" :type="inputType" v-model="localPassword" @input="updatePassword" placeholder="superkryt1337">
     <div className="absolute left-[90%] top-[10px]" @click="togglePassword">
       <svg v-if="isPasswordVisible" width="16" height="15" viewBox="0 0 16 15" fill="none"
         xmlns="http://www.w3.org/2000/svg">

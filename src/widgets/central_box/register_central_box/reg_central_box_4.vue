@@ -1,4 +1,5 @@
 <script>
+import axios from 'axios';
 import input_password from '@/shared/ui/inputs/input_password.vue';
 import btn_next from '@/shared/ui/buttons/button_blue.vue'
 import btn_no_account from '@/shared/ui/buttons/button_grey.vue';
@@ -15,6 +16,27 @@ export default {
     btn_forgot_your_password,
     input_login_or_email,
     text_under_left
+  },
+  data() {
+    return {
+      email: '',
+      password: '',
+      error: null
+    };
+  },
+  methods: {
+    async login() {
+      try {
+        const response = await axios.post('http://localhost:5173/register4', {
+          email: this.email,
+          password: this.password
+        });
+
+        this.$emit('login-success', response.data.token);
+      } catch (error) {
+        this.error = 'Ошибка входа';
+      }
+    }
   }
 }
 
@@ -29,15 +51,15 @@ export default {
       </div>
     </div>
 
-    <div class="m-auto mt-60 flex flex-col">
+    <div @submit.prevent="login" class="m-auto mt-60 flex flex-col">
       <div>
-        <input_login_or_email></input_login_or_email>
+        <input_login_or_email :email="email" @update-email="email = $event"></input_login_or_email>
       </div>
       <div>
-        <input_password></input_password>
+        <input_password :password="password" @update-password="password = $event" ></input_password>
       </div>
       <a href="/">
-        <btn_next>Далее</btn_next>
+        <btn_next @click="login">Далее</btn_next>
       </a>
       <div class="flex flex-col items-end">
         <a href="/register">
